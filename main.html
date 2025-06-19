@@ -2,26 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonial Section</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f6; /* Light background */
+      margin: 20px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      min-height: 90vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    /* Style for the introductory paragraph */
+    .intro-paragraph {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1em;
+      color: #555;
+    }
+
+    /* Styling for testimonial divs, now matching "questions" style */
+    .testimonial {
+      background-color: #f8fffe; /* Background color as specified */
+      height: 50px; /* Height as specified */
+      margin-top: 20px; /* Margin-top as specified */
+      padding: 15px; /* Padding as specified */
+      max-width: 600px; /* Max-width as specified */
+      border-left: 8px solid green; /* Border-left as specified */
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      width: 100%; /* Ensure it's responsive and takes full width up to max-width */
+      border-radius: 5px; /* Added for softer corners */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+      display: flex; /* Use flexbox to center text vertically if needed */
+      align-items: center; /* Align text vertically in the middle */
+      overflow: hidden; /* Prevent text overflowing fixed height if it wraps */
+    }
+
+    .testimonial p {
+      margin: 0; /* Remove default paragraph margins */
+      font-size: 1.1em;
+      color: #2c3e50; /* Darker text color for readability */
+      white-space: nowrap; /* Prevent text from wrapping if it has fixed height */
+      overflow: hidden; /* Hide overflowing text */
+      text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 650px) {
+      .testimonial {
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to adjust for text wrapping */
+        min-height: 50px; /* Ensure a minimum height */
+      }
+      .testimonial p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+        white-space: normal; /* Allow text to wrap on smaller screens */
+        text-overflow: clip; /* Clip overflowing text normally */
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <h1>Our Customer Testimonials</h1>
+
+  <!-- New introductory paragraph -->
+  <p class="intro-paragraph">Hear what our satisfied customers have to say about their experience!</p>
+
   <section class="testimonial-section">
     <div class="testimonial">
-      <p>"This platform helped me grow my skills and land my dream job!"</p>
-      <p class="author">– Ananya Sharma</p>
+      <p>"This platform helped me grow my skills and land my dream job!" – Ananya Sharma</p>
     </div>
 
     <div class="testimonial">
-      <p>"Clean UI and very intuitive. I highly recommend it."</p>
-      <p class="author">– Rohan Mehta</p>
+      <p>"Clean UI and very intuitive. I highly recommend it." – Rohan Mehta</p>
     </div>
 
     <div class="testimonial">
-      <p>"The best learning experience I’ve ever had!"</p>
-      <p class="author">– Priya Verma</p>
+      <p>"The best learning experience I’ve ever had!" – Priya Verma</p>
     </div>
   </section>
 
